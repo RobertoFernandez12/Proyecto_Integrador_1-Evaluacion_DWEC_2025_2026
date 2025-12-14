@@ -40,4 +40,5 @@ Para ejecutar el juego, no es necesario instalar dependencias ni servidores exte
 
 ---
 **Autor:** Roberto Fernández Cordero
+
 **Curso:** 2º Desarrollo de Aplicaciones Web
