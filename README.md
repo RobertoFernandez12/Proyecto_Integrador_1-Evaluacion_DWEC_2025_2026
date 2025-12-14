@@ -1,5 +1,10 @@
 # Juego del Laberinto IT
 
+## 🎮 Enlaces para Jugar
+
+**[JUEGA DIRECTAMENTE AQUÍ (Versión Principal)](https://robertofernandez12.github.io/Proyecto_Integrador_1-Evaluacion_DWEC_2025_2026/)**
+**[Jugar a la Versión 2.0 (Bonus con IA)](https://robertofernandez12.github.io/Proyecto_Integrador_1-Evaluacion_DWEC_2025_2026/VersiónMejorada/)**
+
 Este proyecto es una aplicación web interactiva desarrollada con HTML5, CSS3 y JavaScript. El objetivo es guiar al héroe a través de un tablero de 10x10 hasta alcanzar el globo, utilizando un dado virtual 
 y compitiendo por el menor número de tiradas.
 
@@ -42,3 +47,4 @@ Para ejecutar el juego, no es necesario instalar dependencias ni servidores exte
 **Autor:** Roberto Fernández Cordero
 
 **Curso:** 2º Desarrollo de Aplicaciones Web
+
