@@ -1,0 +1,145 @@
+/* --- CONFIGURACIÓN GENERAL --- */
+body {
+    background-color: #1a1a1d; /* Gris muy oscuro, casi negro */
+    color: #ecf0f1; /* Texto blanco grisáceo para leer bien */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+    /* FLEXBOX para centrar todo en la pantalla */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centrado horizontal */
+    justify-content: center; /* Centrado vertical */
+    min-height: 100vh; /* Altura completa de la ventana */
+    margin: 0;
+}
+
+/* Estilo para los inputs y botones del inicio*/
+input {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    margin: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: #c0392b; /* Rojo sangre */
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    margin: 5px;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background-color: #e74c3c; /* Rojo más claro al pasar el ratón */
+}
+
+button:disabled {
+    background-color: #555;
+    cursor: not-allowed;
+}
+
+/* --- TABLERO --- */
+#tabla {
+    border: 5px solid #333; /* Borde grueso gris oscuro */
+    border-collapse: collapse;
+    display: none; /*Ocultar al inicio */
+    
+    /* Sombra para que parezca que flota */
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.7); 
+    margin-bottom: 20px;
+}
+
+/* Estilo de cada celda */
+#tabla td {
+    width: 60px;  
+    height: 60px;     
+    padding: 0;         /*Mantiene que la imagen toque bordes */
+    border: 1px solid #2c2c2c; /* Borde sutil entre celdas */
+    background-color: #000;
+}
+
+/* Estilo de las imágenes DENTRO de la tabla */
+#tabla img {
+    width: 100%;       
+    height: 100%;      
+    display: block;    /*Evita espacios blancos */
+    object-fit: cover; 
+}
+
+/* --- CASILLAS ACTIVAS --- */
+.activa {
+    /* Mantenemos el !important para asegurar que se ve sobre el borde normal */
+    border: 3px solid #e74c3c !important; /* Rojo intenso */
+    box-shadow: inset 0 0 15px rgba(231, 76, 60, 0.6); /* Resplandor rojo interior */
+    cursor: pointer;
+    box-sizing: border-box; /*Para no deformar la celda */
+    
+    /* Pequeña animación para indicar que es clicable */
+    transition: all 0.2s ease;
+}
+
+.activa:hover {
+    background-color: rgba(231, 76, 60, 0.3); /* Se ilumina un poco más al pasar el ratón */
+}
+
+/* --- PANEL DE CONTROL --- */
+#contenedorDado {
+    /* Lo convertimos en una tarjeta para que resalte sobre el fondo negro */
+    background-color: #ecf0f1; /* Fondo claro */
+    color: #1a1a1d; /* Texto oscuro */
+    
+    padding: 15px 30px;
+    border-radius: 12px; /* Bordes redondeados */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+    
+    margin-top: 10px;
+    text-align: center;
+    display: none; /* Mantiene la lógica */
+    
+    /* Flexbox para alinear dado y texto verticalmente */
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+#tirarDado { 
+    background: none;
+    border: none;
+    cursor: pointer; /*Para que en las casillas clicables se cambie el cursor por la mano*/
+    padding: 0;
+    transition: transform 0.2s;
+}
+
+#tirarDado:hover {
+    transform: scale(1.1); /* Efecto zoom al pasar el ratón */
+}
+
+#imagenDado {
+    height: 60px; 
+    width: 60px;
+    display: block; /* Elimina espacios extra */
+}
+
+#textoTiradas {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #c0392b; /* Rojo sangre para el contador */
+    margin: 0; /* Quitamos margin porque ya usamos gap en el padre */
+    text-transform: uppercase;
+}
+
+/* --- INFO RÉCORD --- */
+#infoRecord {
+    margin-top: 20px;
+    font-weight: bold;
+    background-color: #333; /* Fondo oscuro para el record */
+    padding: 8px 20px;
+    border-radius: 20px;
+    border: 1px solid #555;
+    font-size: 0.9rem;
+    color: #f1c40f; /* Amarillo dorado para resaltar el récord */
+}
